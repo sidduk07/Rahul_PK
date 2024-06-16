@@ -1,0 +1,285 @@
+/* styles.css */
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2c5d9e;
+  --secondary-color: #4c9a2a;
+  --accent-color: #f7941d;
+  --text-color: #333;
+  --background-color: #f5f5f5;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding: 5rem;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e68a1e;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 60%;
+  /* height: 50%; */
+  /* border-radius: 50%; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.education-item {
+  margin-bottom: 1rem;
+}
+
+/* Research Section */
+.research ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.research ul li {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.research-experience {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Publications Section */
+.publication-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.publication-item {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+.publication-item h3 {
+  margin-top: 0;
+}
+
+.publication-item p {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+.skill-section {
+  margin-bottom: 2rem;
+}
+
+.skill-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.skill-section-content {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  display: none;
+}
+
+.skill-section-content.open {
+  display: block;
+}
+
+.skill-section-header.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Achievements Section */
+.award-list,
+.conference-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.award-item,
+.conference-item {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+/* Contact Section */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.contact-details,
+.contact-form {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
